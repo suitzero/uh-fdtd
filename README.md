@@ -21,10 +21,10 @@ uh-fdtd is a purely functional Finite-Difference Time-Domain (FDTD) simulator bu
 ## Planning & Roadmap
 
 ### Phase 1: JAX-Native Engine Foundation
-- [ ] Set up immutable state data structures for the Yee Grid.
-- [ ] Implement 1D/2D Maxwell curl operators using jax.numpy.
-- [ ] Implement pure-functional time-stepping loop (jax.lax.scan).
-- [ ] Integrate basic sources (Dipole, Gaussian) and DFT monitors.
+- [x] Set up immutable state data structures for the Yee Grid.
+- [x] Implement 1D/2D Maxwell curl operators using jax.numpy.
+- [x] Implement pure-functional time-stepping loop (jax.lax.scan).
+- [x] Integrate basic sources (Dipole, Gaussian) and DFT monitors.
 
 ### Phase 2: Differentiability & The Adjoint Method
 - [ ] Implement density-based material parameterization (permittivity mapping).
