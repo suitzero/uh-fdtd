@@ -27,7 +27,7 @@ uh-fdtd is a purely functional Finite-Difference Time-Domain (FDTD) simulator bu
 - [x] Integrate basic sources (Dipole, Gaussian) and DFT monitors.
 
 ### Phase 2: Differentiability & The Adjoint Method
-- [ ] Implement density-based material parameterization (permittivity mapping).
+- [x] Implement density-based material parameterization (permittivity mapping).
 - [ ] Build custom VJP logic to bypass memory constraints of unrolling massive time steps.
 - [ ] Integrate Optax for basic gradient descent on a simple transmission loss function.
 
