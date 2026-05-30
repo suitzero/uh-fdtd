@@ -28,7 +28,7 @@ uh-fdtd is a purely functional Finite-Difference Time-Domain (FDTD) simulator bu
 
 ### Phase 2: Differentiability & The Adjoint Method
 - [x] Implement density-based material parameterization (permittivity mapping).
-- [ ] Build custom VJP logic to bypass memory constraints of unrolling massive time steps.
+- [x] Build custom VJP logic to bypass memory constraints of unrolling massive time steps.
 - [ ] Integrate Optax for basic gradient descent on a simple transmission loss function.
 
 ### Phase 3: Inverse Design of Optical Components
