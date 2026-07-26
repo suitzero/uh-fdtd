@@ -17,6 +17,7 @@ uh-fdtd is a purely functional Finite-Difference Time-Domain (FDTD) simulator bu
 * **Core FDTD Engine:** 1D/2D Maxwell's equations discretized on a Yee grid.
 * **Boundary Conditions:** Differentiable Convolutional Perfectly Matched Layers (CPML).
 * **Adjoint Optimizer:** Memory-efficient gradient computation via custom Vector-Jacobian Products (VJP) for topology optimization.
+  * Features `optax` integration for straightforward density optimization based on objective functions like transmission loss.
 
 ## Planning & Roadmap
 
@@ -29,7 +30,7 @@ uh-fdtd is a purely functional Finite-Difference Time-Domain (FDTD) simulator bu
 ### Phase 2: Differentiability & The Adjoint Method
 - [x] Implement density-based material parameterization (permittivity mapping).
 - [x] Build custom VJP logic to bypass memory constraints of unrolling massive time steps.
-- [ ] Integrate Optax for basic gradient descent on a simple transmission loss function.
+- [x] Integrate Optax for basic gradient descent on a simple transmission loss function.
 
 ### Phase 3: Inverse Design of Optical Components
 - [ ] Optimize a basic directional coupler.
