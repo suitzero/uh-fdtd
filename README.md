@@ -1,23 +1,36 @@
-# uh-fdtd
+# Photonics Simulation Platform
 
-A Differentiable, JAX-accelerated FDTD Engine for Optical Computing Architecture
+A Scalable, JAX-accelerated FDTD Engine & EDA Pipeline for Optical Computing Architectures.
 
-uh-fdtd is a purely functional Finite-Difference Time-Domain (FDTD) simulator built on JAX and XLA. By leveraging auto-differentiation (Autograd) and hardware acceleration (GPU/TPU), uh-fdtd transcends traditional forward-simulation, enabling large-scale inverse design and topology optimization for nanophotonics and Optical Neural Networks (ONNs).
+This platform bridges the gap between device-level electromagnetic simulations and circuit-level behavioral modeling, enabling large-scale inverse design and topology optimization for nanophotonics and Optical Neural Networks (ONNs).
 
 **Author:** Hagyoon Choi
 
 ## Core Philosophy
 
+* **Unified Simulation Pipeline:** Seamlessly extract S-parameters from the native FDTD solver and inject them into a Mach-Zehnder Interferometer (MZI) mesh simulator.
 * **First-Principles Design:** Minimalist, zero-overhead Yee grid implementation.
 * **Purely Functional:** State updates are strictly handled via `jax.lax.scan` to maintain differentiability and XLA compilation efficiency.
-* **Hardware-Native:** Designed from the ground up to scale across parallel hardware architectures.
+* **Hardware-Native & Scalable:** Designed from the ground up to scale across parallel hardware architectures (GPU/TPU) and Kubernetes clusters for distributed job scheduling.
 
-## Architecture
+## Architecture Layers
 
-* **Core FDTD Engine:** 1D/2D Maxwell's equations discretized on a Yee grid.
-* **Boundary Conditions:** Differentiable Convolutional Perfectly Matched Layers (CPML).
-* **Adjoint Optimizer:** Memory-efficient gradient computation via custom Vector-Jacobian Products (VJP) for topology optimization.
-  * Features `optax` integration for straightforward density optimization based on objective functions like transmission loss.
+**1. Core Simulation Engines**
+* **uh-fdtd:** 1D/2D Maxwell's equations discretized on a Yee grid, with differentiable CPML boundaries. Resolves device-level (e.g., couplers, phase shifters) Maxwell physics.
+* **MZI Circuit Simulator:** Simulates ideal combinations of transfer matrices on a circuit level.
+
+**2. Platform Layer**
+* A Kubernetes-based orchestration layer designed for distributed execution.
+* Go-based Job Scheduler & API Server.
+* NATS queueing and GPU worker autoscaling.
+* GitOps deployment via Terraform & ArgoCD, with observability via Prometheus & OpenTelemetry.
+
+**3. AI / Inverse Design Layer**
+* **Inverse Design:** Utilizes the adjoint method and gradient descent to find optimal device structures or MZI phase settings based on target unitary matrices.
+* Features `optax` integration for straightforward parameter optimization.
+
+**4. Documentation & System Design**
+* See `docs/system_design.md` for a comprehensive overview of the platform's distributed architecture.
 
 ## Planning & Roadmap
 
@@ -33,6 +46,7 @@ uh-fdtd is a purely functional Finite-Difference Time-Domain (FDTD) simulator bu
 - [x] Integrate Optax for basic gradient descent on a simple transmission loss function.
 
 ### Phase 3: Inverse Design of Optical Components
+- [x] Extract S-parameters from FDTD for MZI mesh integration.
 - [ ] Optimize a basic directional coupler.
 - [ ] Synthesize low-loss waveguide crossings.
 - [ ] Design Mach-Zehnder Interferometer (MZI) phases for active modulation.
