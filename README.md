@@ -4,7 +4,7 @@ A Scalable, JAX-accelerated FDTD Engine & EDA Pipeline for Optical Computing Arc
 
 This platform bridges the gap between device-level electromagnetic simulations and circuit-level behavioral modeling, enabling large-scale inverse design and topology optimization for nanophotonics and Optical Neural Networks (ONNs).
 
-**Author:** Hagyoon Choi
+**Author:** Hagyoon Choi (@suitzero)
 
 ## Core Philosophy
 
