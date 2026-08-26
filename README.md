@@ -48,7 +48,7 @@ This platform bridges the gap between device-level electromagnetic simulations a
 ### Phase 3: Inverse Design of Optical Components
 - [x] Extract S-parameters from FDTD for MZI mesh integration.
 - [x] Optimize a basic directional coupler.
-- [ ] Synthesize low-loss waveguide crossings.
+- [x] Synthesize low-loss waveguide crossings.
 - [ ] Design Mach-Zehnder Interferometer (MZI) phases for active modulation.
 
 ### Phase 4: Optical Neural Network Integration
