@@ -49,7 +49,7 @@ This platform bridges the gap between device-level electromagnetic simulations a
 - [x] Extract S-parameters from FDTD for MZI mesh integration.
 - [x] Optimize a basic directional coupler.
 - [x] Synthesize low-loss waveguide crossings.
-- [ ] Design Mach-Zehnder Interferometer (MZI) phases for active modulation.
+- [x] Design Mach-Zehnder Interferometer (MZI) phases for active modulation.
 
 ### Phase 4: Optical Neural Network Integration
 - [ ] Construct MVM (Matrix-Vector Multiplication) layers using optimized components.
