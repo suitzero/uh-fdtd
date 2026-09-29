@@ -52,5 +52,5 @@ This platform bridges the gap between device-level electromagnetic simulations a
 - [x] Design Mach-Zehnder Interferometer (MZI) phases for active modulation.
 
 ### Phase 4: Optical Neural Network Integration
-- [ ] Construct MVM (Matrix-Vector Multiplication) layers using optimized components.
+- [x] Construct MVM (Matrix-Vector Multiplication) layers using optimized components.
 - [ ] End-to-end integration with neural network frameworks (Flax/PyTorch).
